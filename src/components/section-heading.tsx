@@ -5,11 +5,9 @@ interface SectionHeadingProps {
 export function SectionHeading({heading}: SectionHeadingProps) {
     return (
         <div className="row">
-            <div className="text-center">
-                <div className="display-4 mb-3">
-                    <div className="name text-primary text-uppercase fw-bold section-heading">
-                        {heading}
-                    </div>
+            <div className="col-md-12 text-center mb-5">
+                <div className="fs-1 text-primary text-uppercase fw-bold section-heading">
+                    {heading}
                 </div>
             </div>
         </div>
