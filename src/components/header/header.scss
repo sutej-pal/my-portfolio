@@ -1,10 +1,19 @@
+@import "src/theme/custom-theme";
+
 .header {
-  //height: 120px;
 
   .header-container {
     padding: 15px;
+
     .nav-item {
+      &:hover {
+        a {
+          color: $primary;
+        }
+      }
+
       & .active {
+        color: $primary;
         font-weight: bold;
       }
     }

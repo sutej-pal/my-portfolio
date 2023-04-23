@@ -8,7 +8,7 @@ export function About() {
                 <SectionHeading heading='About Me'/>
                 <div className="row">
                     <div className="col-md-12">
-                        <div className="fs-4 text-center my-4">
+                        <div className="fs-4 text-center">
                             Here you will find more information about me, what I do, and my current skills mostly in
                             terms of
                             programming and technology

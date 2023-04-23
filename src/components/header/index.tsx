@@ -18,7 +18,7 @@ export function Header() {
 
         sections.forEach((current: any) => {
             const sectionHeight = current.offsetHeight;
-            const sectionTop = current.offsetTop - 50;
+            const sectionTop = current.offsetTop - 80;
             const sectionId = current.getAttribute("id");
 
             /*
@@ -40,7 +40,7 @@ export function Header() {
     return (
         <nav className="navbar fixed-top navbar-expand-lg p-0 header shadow-sm">
             <div className="container-fluid bg-white h-100 header-container">
-                <a className="align-items-center d-flex gap-3 navbar-brand" href="#">
+                <a className="align-items-center d-flex gap-3 navbar-brand" href="#home">
                     <div className="align-text-top d-inline-block overflow-hidden rounded-circle">
                         <img src="/image/sutej.png" alt="Sutej Pal"/>
                     </div>
@@ -56,19 +56,19 @@ export function Header() {
                 <div className="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                     <ul className="navbar-nav">
                         <li className="nav-item">
-                            <a className={cx('nav-link fs-3 px-4 py-3 text-uppercase text-secondary active')}
+                            <a className={cx('nav-link fs-3 px-4 py-3 text-uppercase active')}
                                aria-current="page" href="#home">Home</a>
                         </li>
                         <li className="nav-item">
-                            <a className={cx('nav-link fs-3 px-4 py-3 text-uppercase text-secondary')}
+                            <a className={cx('nav-link fs-3 px-4 py-3 text-uppercase')}
                                href="#about">About</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link fs-3 px-4 py-3 text-uppercase text-secondary"
+                            <a className="nav-link fs-3 px-4 py-3 text-uppercase"
                                href="#projects">Projects</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link fs-3 px-4 py-3 text-uppercase text-secondary"
+                            <a className="nav-link fs-3 px-4 py-3 text-uppercase"
                                href="#contact">Contact</a>
                         </li>
                     </ul>
