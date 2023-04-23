@@ -1,10 +1,23 @@
-import './App.css'
+import {Home} from "./screens/home";
+
+// Import bootstrap
+
+import './App.scss'
+
+import {Header} from "./components/header";
+import {About} from "./screens/about";
+import {Projects} from "./screens/projects";
+import {Contact} from "./screens/contact";
 
 function App() {
 
     return (
-        <div>
-            <h1 style={{textAlign: "center"}}>My Portfolio</h1>
+        <div className="container-fluid">
+            <Header/>
+            <Home/>
+            <About/>
+            <Projects/>
+            <Contact/>
         </div>
     )
 }
