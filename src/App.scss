@@ -11,17 +11,16 @@
   padding: 100px 0;
 }
 .section-padding {
-  padding: 100px 0;
+  padding: 125px 0;
 }
 
 .section-heading {
-  letter-spacing: 3px;
   position: relative;
 
   &::after {
     content: '';
     position: absolute;
-    top: 85px;
+    top: 1.5em;
     height: 10px;
     width: 5rem;
     background: $secondary;

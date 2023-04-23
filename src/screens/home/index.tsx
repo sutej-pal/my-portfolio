@@ -3,7 +3,7 @@ import './home.scss';
 export function Home() {
     return (
         <>
-            <div className="row home">
+            <section className="row home" id="home">
                 <div className="col-md-12 mb-3">
                     <div className="d-flex flex-column h-100 justify-content-center align-items-center">
                         <div className="text-center">
@@ -19,7 +19,7 @@ export function Home() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
         </>
     )
 }

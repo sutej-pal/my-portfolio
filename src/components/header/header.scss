@@ -1,3 +1,27 @@
 .header {
-  height: 100px;
+  //height: 120px;
+
+  .header-container {
+    padding: 15px;
+    .nav-item {
+      & .active {
+        font-weight: bold;
+      }
+    }
+  }
+
+  img {
+    height: 80px;
+    width: 80px;
+  }
+
+  @media (max-width: 992px) {
+    .nav-item {
+      border-bottom: 1px solid #dee2e6;
+
+      &:last-child {
+        border: none;
+      }
+    }
+  }
 }

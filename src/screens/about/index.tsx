@@ -4,7 +4,7 @@ import {SectionHeading} from "../../components/section-heading";
 export function About() {
     return (
         <>
-            <div className="about section-padding" id="about">
+            <section className="about section-padding" id="about">
                 <SectionHeading heading='About Me'/>
                 <div className="row">
                     <div className="col-md-12">
@@ -15,7 +15,7 @@ export function About() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
         </>
     )
 }
