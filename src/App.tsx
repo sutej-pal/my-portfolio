@@ -6,6 +6,8 @@ import './App.scss'
 
 import {Header} from "./components/header";
 import {About} from "./screens/about";
+import {Projects} from "./screens/projects";
+import {Contact} from "./screens/contact";
 
 function App() {
 
@@ -14,6 +16,8 @@ function App() {
             <Header/>
             <Home/>
             <About/>
+            <Projects/>
+            <Contact/>
         </div>
     )
 }

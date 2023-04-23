@@ -7,3 +7,29 @@
 @import "node_modules/bootstrap/scss/bootstrap";
 
 
+.section-height {
+  padding: 100px 0;
+}
+.section-padding {
+  padding: 100px 0;
+}
+
+.section-heading {
+  letter-spacing: 3px;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 85px;
+    height: 10px;
+    width: 5rem;
+    background: $secondary;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+  }
+}
+
+
+

@@ -2,8 +2,8 @@ import './header.scss';
 
 export function Header() {
     return (
-        <nav className="navbar navbar-expand-lg">
-            <div className="container-fluid bg-white">
+        <nav className="navbar fixed-top navbar-expand-lg p-0 header">
+            <div className="container-fluid bg-white h-100">
                 <a className="navbar-brand" href="#">
                     <img src="../../../public/vite.svg" alt="Logo" width="30" height="24"
                          className="d-inline-block align-text-top "/>
@@ -26,10 +26,10 @@ export function Header() {
                             <a className="nav-link fs-3 px-4 py-3 text-uppercase text-secondary" href="#about">About</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link fs-3 px-4 py-3 text-uppercase text-secondary" href="#">Projects</a>
+                            <a className="nav-link fs-3 px-4 py-3 text-uppercase text-secondary" href="#projects">Projects</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link fs-3 px-4 py-3 text-uppercase text-secondary" href="#">Contact</a>
+                            <a className="nav-link fs-3 px-4 py-3 text-uppercase text-secondary" href="#contact">Contact</a>
                         </li>
                     </ul>
                 </div>
