@@ -1,4 +1,4 @@
-import {useEffect} from "react";
+import {useEffect, useRef} from "react";
 import classnames from "classnames";
 import * as _ from 'underscore';
 
@@ -7,6 +7,8 @@ import './header.scss';
 const cx = classnames;
 
 export function Header() {
+
+    const navBarToggle = useRef(null);
 
     const handleScroll = () => {
         // Get current scroll position
@@ -37,6 +39,15 @@ export function Header() {
         window.addEventListener("scroll", _.throttle(handleScroll, 50));
     }, []);
 
+    const closeNavBarDropdown = () => {
+        if (window.innerWidth < 992) {
+            if (navBarToggle && navBarToggle.current) {
+                const el = navBarToggle.current as HTMLElement
+                el.click();
+            }
+        }
+    }
+
     return (
         <nav className="navbar fixed-top navbar-expand-lg p-0 header shadow-sm">
             <div className="container-fluid bg-white h-100 header-container">
@@ -51,25 +62,25 @@ export function Header() {
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
                         aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
+                    <span ref={navBarToggle} className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                     <ul className="navbar-nav">
                         <li className="nav-item">
                             <a className={cx('nav-link fs-3 px-4 py-3 text-uppercase active')}
-                               aria-current="page" href="#home">Home</a>
+                               href="#home" onClick={() => closeNavBarDropdown()}>Home</a>
                         </li>
                         <li className="nav-item">
                             <a className={cx('nav-link fs-3 px-4 py-3 text-uppercase')}
-                               href="#about">About</a>
+                               href="#about" onClick={() => closeNavBarDropdown()}>About</a>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link fs-3 px-4 py-3 text-uppercase"
-                               href="#projects">Projects</a>
+                               href="#projects" onClick={() => closeNavBarDropdown()}>Projects</a>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link fs-3 px-4 py-3 text-uppercase"
-                               href="#contact">Contact</a>
+                               href="#contact" onClick={() => closeNavBarDropdown()}>Contact</a>
                         </li>
                     </ul>
                 </div>
