@@ -1,24 +1,19 @@
-import {Home} from "./screens/home";
+import { RouterProvider } from 'react-router';
 
 // Import bootstrap
 
 import './App.scss'
 
-import {Header} from "./components/header";
-import {About} from "./screens/about";
-import {Projects} from "./screens/projects";
-import {Contact} from "./screens/contact";
+import generateRoutes from "./routes";
 
 function App() {
 
     return (
-        <div className="container-fluid">
-            <Header/>
-            <Home/>
-            <About/>
-            <Projects/>
-            <Contact/>
-        </div>
+        <RouterProvider router={generateRoutes()}/>
+        // <div className="container-fluid">
+        //     <Header/>
+        //
+        // </div>
     )
 }
 

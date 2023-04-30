@@ -1,6 +1,7 @@
 import {SectionHeading} from "../../components/section-heading";
 import {SectionSubHeading} from "../../components/section-subheading";
 import {Project} from "../../components/project";
+import {projects} from '../../assets/projects';
 
 export function Projects() {
     return (
@@ -11,7 +12,15 @@ export function Projects() {
                     heading='Here you will find some of the personal and clients projects that I created, with each project
                         containing its own case study'
                 />
-                <Project/>
+                {
+                    projects.map((project: any, index: number) => {
+                        return <Project key={index}
+                                        name={project.name}
+                                        imageUrl={project.image}
+                                        description={project.description}
+                        />
+                    })
+                }
             </div>
         </section>
     )

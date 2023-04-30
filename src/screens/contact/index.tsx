@@ -41,7 +41,7 @@ export function Contact() {
         <section className="vh-100 section-padding" id="contact">
             <SectionHeading heading='Contact'/>
             <div className="row">
-                <div className="col-sm-10 col-md-8 col-lg-6 col-xl-5 m-auto">
+                <div className="col-sm-10 col-md-8 col-lg-6 col-xl-4 m-auto">
                     <div className="card shadow p-4 border-0 contact-form text-secondary">
                         <form>
                             <div className="mb-4">

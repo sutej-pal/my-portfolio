@@ -1,0 +1,15 @@
+@import "src/App.scss";
+
+@include media-breakpoint-down(md) {
+  .project {
+    .project-img-container {
+    }
+
+
+    .project-description {
+        text-align: center;
+      .project-name {
+      }
+    }
+  }
+}

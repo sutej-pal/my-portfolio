@@ -96,27 +96,3 @@
   }
 }
 
-@include media-breakpoint-up(xs) {
-  .project {
-    .project-img-container {
-      text-align: center;
-    }
-
-    .project-description {
-      text-align: center;
-    }
-  }
-}
-
-@include media-breakpoint-up(md) {
-  .project {
-    .project-img-container {
-      text-align: center;
-    }
-
-    .project-description {
-
-    }
-  }
-}
-
