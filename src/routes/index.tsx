@@ -10,8 +10,10 @@ function generateRoutes() {
                 path: '/',
                 element: (
                     <>
-                        <Header/>
-                        <Outlet/>
+                        <div className="container-fluid">
+                            <Header/>
+                            <Outlet/>
+                        </div>
                     </>
                 ),
                 children: dashboardRoutes()

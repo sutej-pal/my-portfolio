@@ -3,6 +3,7 @@ import classnames from "classnames";
 import * as _ from 'underscore';
 
 import './header.scss';
+
 import {detectBootstrapBreakpoint, handleScroll} from "../../helpers";
 
 const cx = classnames;
@@ -16,6 +17,7 @@ export function Header() {
         window.addEventListener("scroll", _.throttle(handleScroll, 50));
         window.addEventListener("click", handleBSDropdown);
         window.addEventListener('resize', handleResize);
+        setCurrentBreakpoint(detectBootstrapBreakpoint());
     }, []);
 
     const handleBSDropdown = (e: any) => {
@@ -51,7 +53,13 @@ export function Header() {
                         aria-label="Toggle navigation">
                     <span ref={navBarToggle} className="navbar-toggler-icon"></span>
                 </button>
-                <div className={cx('collapse navbar-collapse justify-content-end', currentBreakpoint === 'md' ? 'bg-white shadow' : '')} id="navbarNavDropdown">
+                <div className={
+                    cx(
+                        'collapse navbar-collapse justify-content-end',
+                        currentBreakpoint === 'md' ? 'bg-white shadow' : '',
+                        currentBreakpoint === 'sm' ? 'bg-white shadow' : '',
+                        currentBreakpoint === 'xs' ? 'bg-white shadow' : '',
+                        )} id="navbarNavDropdown">
                     <ul className="navbar-nav">
                         <li className="nav-item">
                             <a className={cx('nav-link fs-3 px-4 py-3 text-uppercase active')}

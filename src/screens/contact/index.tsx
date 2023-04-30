@@ -3,6 +3,7 @@ import classnames from "classnames";
 import './contact.scss';
 import {FormEvent, useEffect, useState} from "react";
 import {Spinner} from "../../components/spinner";
+import {detectBootstrapBreakpoint} from "../../helpers";
 
 const cx = classnames;
 
@@ -14,6 +15,18 @@ export function Contact() {
     const [name, setName] = useState<string>('');
     const [email, setEmail] = useState<string>('');
     const [message, setMessage] = useState<string>('');
+
+    const [currentBreakpoint, setCurrentBreakpoint] = useState('');
+
+    useEffect(() => {
+        window.addEventListener('resize', handleResize);
+        setCurrentBreakpoint(detectBootstrapBreakpoint());
+    }, []);
+
+
+    const handleResize = () => {
+        setCurrentBreakpoint(detectBootstrapBreakpoint());
+    };
 
 
     const submit = async (e: FormEvent) => {
@@ -77,7 +90,10 @@ export function Contact() {
                                           value={message}
                                           id="exampleFormControlTextarea1" rows={7}/>
                             </div>
-                            <div className="my-3 text-end">
+                            <div className={cx(
+                                'my-3 text-end',
+                                ['md', 'sm', 'xs'].includes(currentBreakpoint) ? 'text-center': ''
+                            )}>
                                 <button type="submit" onClick={submit}
                                         className="btn btn-lg fw-medium btn-secondary text-uppercase py-2 px-4">
                                     {isLoading ? <Spinner white/> : 'Submit'}
