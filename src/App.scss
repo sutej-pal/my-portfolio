@@ -2,6 +2,7 @@
 
 // custom overrides
 @import "theme/custom-theme";
+@import "theme/variables";
 
 // Bootstrap and its default variables
 @import "node_modules/bootstrap/scss/bootstrap";
@@ -92,30 +93,6 @@
     &.white {
       --spinner-color: #fff;
       border-top-color: transparent;
-    }
-  }
-}
-
-@include media-breakpoint-up(xs) {
-  .project {
-    .project-img-container {
-      text-align: center;
-    }
-
-    .project-description {
-      text-align: center;
-    }
-  }
-}
-
-@include media-breakpoint-up(md) {
-  .project {
-    .project-img-container {
-      text-align: center;
-    }
-
-    .project-description {
-
     }
   }
 }

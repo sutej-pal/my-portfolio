@@ -1,4 +1,10 @@
-@import "src/theme/custom-theme";
+@import "src/App.scss";
+
+@include media-breakpoint-down(lg) {
+  .navbar-collapse {
+    background: white;
+  }
+}
 
 .header {
   height: 120px;
