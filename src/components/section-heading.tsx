@@ -2,7 +2,7 @@ interface SectionHeadingProps {
     heading: string
 }
 
-export function SectionHeading({heading}: SectionHeadingProps) {
+export function SectionHeading({heading = ''}: SectionHeadingProps) {
     return (
         <div className="row">
             <div className="col-md-12 text-center mb-5">

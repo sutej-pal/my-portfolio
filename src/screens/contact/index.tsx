@@ -51,7 +51,7 @@ export function Contact() {
     }, [isContactSuccess])
 
     return (
-        <section className="vh-100 section-padding" id="contact">
+        <section className="vh-100 custom-scroll section-padding" id="contact">
             <SectionHeading heading='Contact'/>
             <div className="row">
                 <div className="col-sm-10 col-md-8 col-lg-6 col-xl-4 m-auto">

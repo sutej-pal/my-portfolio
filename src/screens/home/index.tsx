@@ -3,7 +3,7 @@ import './home.scss';
 export function Home() {
     return (
         <>
-            <section className="row" id="home">
+            <section className="row custom-scroll" id="home">
                 <div className="col-md-12 mb-3">
                     <div className="d-flex flex-column h-100 justify-content-center align-items-center">
                         <div className="text-center">

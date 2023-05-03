@@ -5,12 +5,12 @@ import {Contact} from "../../screens/contact";
 
 function DashboardPage() {
     return (
-        <>
+        <div className="container-fluid">
             <Home/>
             <About/>
             <Projects/>
             <Contact/>
-        </>
+        </div>
     )
 }
 

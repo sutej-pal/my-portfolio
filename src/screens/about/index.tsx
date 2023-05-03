@@ -28,21 +28,21 @@ export function About() {
                         <div className="col-md-6">
                             <div className="section-subheading-1 mb-3">Skills</div>
                             <div className="d-flex justify-content-start flex-wrap gap-3 mb-4">
-                                <button className="btn btn-light btn-outline-secondary">HTML</button>
-                                <button className="btn btn-light btn-outline-secondary">JavaScript</button>
-                                <button className="btn btn-light btn-outline-secondary">TypeScript</button>
-                                <button className="btn btn-light btn-outline-secondary">CSS</button>
-                                <button className="btn btn-light btn-outline-secondary">SCSS</button>
-                                <button className="btn btn-light btn-outline-secondary">Git</button>
-                                <button className="btn btn-light btn-outline-secondary">Github</button>
+                                <button className="border-0 btn btn-light btn-outline-secondary">HTML</button>
+                                <button className="border-0 btn btn-light btn-outline-secondary">JavaScript</button>
+                                <button className="border-0 btn btn-light btn-outline-secondary">TypeScript</button>
+                                <button className="border-0 btn btn-light btn-outline-secondary">CSS</button>
+                                <button className="border-0 btn btn-light btn-outline-secondary">SCSS</button>
+                                <button className="border-0 btn btn-light btn-outline-secondary">Git</button>
+                                <button className="border-0 btn btn-light btn-outline-secondary">Github</button>
                             </div>
                             <div className="section-subheading-1 mb-3">Frameworks</div>
                             <div className="d-flex justify-content-start flex-wrap gap-3 mb-2">
-                                <button className="btn btn-light btn-outline-secondary">MERN Stack</button>
-                                <button className="btn btn-light btn-outline-secondary">MEAN Stack</button>
-                                <button className="btn btn-light btn-outline-secondary">React</button>
-                                <button className="btn btn-light btn-outline-secondary">Angular</button>
-                                <button className="btn btn-light btn-outline-secondary">Vue</button>
+                                <button className="border-0 btn btn-light btn-outline-secondary">MERN Stack</button>
+                                <button className="border-0 btn btn-light btn-outline-secondary">MEAN Stack</button>
+                                <button className="border-0 btn btn-light btn-outline-secondary">React</button>
+                                <button className="border-0 btn btn-light btn-outline-secondary">Angular</button>
+                                <button className="border-0 btn btn-light btn-outline-secondary">Vue</button>
                             </div>
                         </div>
                     </div>

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Noto+Sans:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;0,700;1,400&display=swap');
 
 // custom overrides
 @import "theme/custom-theme";
@@ -6,7 +7,6 @@
 
 // Bootstrap and its default variables
 @import "node_modules/bootstrap/scss/bootstrap";
-
 
 .section-height {
   padding: 100px 0;
@@ -95,5 +95,13 @@
       border-top-color: transparent;
     }
   }
+}
+
+@mixin home-page-bg {
+  background: linear-gradient(to right, rgba(245, 245, 245, .8), rgba(245, 245, 245, .8)), url(https://d33wubrfki0l68.cloudfront.net/daac8858fd4a0ccea44f59dfd079c3c16c263f33/c157c/assets/svg/common-bg.svg);
+}
+
+.btn-light {
+  background: #9993;
 }
 

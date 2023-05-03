@@ -1,7 +1,7 @@
 import {SectionHeading} from "../../components/section-heading";
 import {SectionSubHeading} from "../../components/section-subheading";
 import {Project} from "../../components/project";
-import {projects} from '../../assets/projects';
+import {MyProjects} from '../../assets/myProjects';
 
 export function Projects() {
     return (
@@ -13,11 +13,11 @@ export function Projects() {
                         containing its own case study'
                 />
                 {
-                    projects.map((project: any, index: number) => {
+                    MyProjects.map((project: any, index: number) => {
                         return <Project key={index}
                                         name={project.name}
                                         imageUrl={project.image}
-                                        description={project.description}
+                                        briefSummary={project.briefSummary}
                         />
                     })
                 }
