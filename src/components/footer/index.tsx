@@ -35,10 +35,10 @@ export function Footer() {
                             </div>
                             <div className="align-content-center d-flex gap-3 justify-content-end">
                                 <a role="button" href="https://github.com/sutej-pal/" target="_blank">
-                                    <img src="../../../public/images/github.svg" alt=""/>
+                                    <img src="/images/github.svg" alt=""/>
                                 </a>
                                 <a role="button" href="https://www.linkedin.com/in/sutej-pal/" target="_blank">
-                                    <img src="../../../public/images/linkedin.svg" alt=""/>
+                                    <img src="/images/linkedin.svg" alt=""/>
                                 </a>
                             </div>
                         </div>
