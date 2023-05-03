@@ -1,0 +1,8 @@
+@import "src/App";
+
+.project-details {
+  .section-1 {
+    height: 70vh;
+    @include home-page-bg();
+  }
+}

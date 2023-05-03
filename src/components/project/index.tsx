@@ -3,17 +3,18 @@ import {useEffect, useState} from "react";
 import * as _ from "underscore";
 import {detectBootstrapBreakpoint, handleScroll} from "../../helpers";
 import cx from "classnames";
+import {Link} from "react-router-dom";
 
 interface ProjectProps {
     name: string;
     imageUrl: string;
-    description: string;
+    briefSummary: string;
 }
 
 export function Project({
                             name = '',
                             imageUrl = '',
-                            description = ''
+                            briefSummary = ''
                         }: ProjectProps) {
 
     const [currentBreakpoint, setCurrentBreakpoint] = useState('');
@@ -36,15 +37,16 @@ export function Project({
             <div className={
                 cx(
                     'col-md-6 project-description',
-                    currentBreakpoint === 'sm' ? 'text-center' : '',
-                    currentBreakpoint === 'xs' ? 'text-center' : ''
+                    ['sm', 'xs'].includes(currentBreakpoint) ? 'text-center' : ''
                 )}>
                 <div className="fs-2 fw-medium mb-2 project-name">{name}</div>
                 <p className="project-description">
-                    {description}
+                    {briefSummary}
                 </p>
-                <button className="btn btn-lg btn-secondary px-4 py-2 shadow text-uppercase case-study">Case Study
+                <Link to={'/project-details/' + name}>
+                <button className="btn btn-lg btn-secondary px-4 py-2 shadow text-uppercase case-study">Learn More
                 </button>
+                </Link>
             </div>
         </div>
     )

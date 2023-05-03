@@ -1,4 +1,5 @@
 import {useEffect, useRef, useState} from "react";
+import {HashLink} from 'react-router-hash-link';
 import classnames from "classnames";
 import * as _ from 'underscore';
 
@@ -21,7 +22,13 @@ export function Header() {
     }, []);
 
     const handleBSDropdown = (e: any) => {
-        console.log(e)
+        const t1 = document.querySelector('#navbarNavDropdown');
+        if (t1 && t1.classList.contains('show')) {
+            const t2 = document.querySelector('.navbar');
+            if ([2, 10].includes(e.target.compareDocumentPosition(t2))) {
+                closeNavBarDropdown();
+            }
+        }
     };
 
     const handleResize = () => {
@@ -38,48 +45,48 @@ export function Header() {
     }
 
     return (
-        <nav className={cx('navbar fixed-top navbar-expand-lg p-0 header shadow-sm')}>
-            <div className="container-fluid bg-white h-100 header-container">
-                <a className="align-items-center d-flex gap-3 navbar-brand" href="#home">
-                    <div className="align-text-top d-inline-block overflow-hidden rounded-circle">
-                        <img src="/images/sutej.png" alt="Sutej Pal"/>
-                    </div>
-                    <span className="fs-2 text-secondary text-uppercase">
+        <div id="header">
+            <nav className={cx('navbar fixed-top navbar-expand-lg p-0 header shadow-sm')}>
+                <div className="container-fluid bg-white h-100 header-container">
+                    <a className="align-items-center d-flex gap-3 navbar-brand" href="#home">
+                        <div className="align-text-top d-inline-block overflow-hidden rounded-circle">
+                            <img src="/images/sutej.png" alt="Sutej Pal"/>
+                        </div>
+                        <span className="fs-2 text-secondary text-uppercase">
                         Sutej Pal
                     </span>
-                </a>
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                    <span ref={navBarToggle} className="navbar-toggler-icon"></span>
-                </button>
-                <div className={
-                    cx(
-                        'collapse navbar-collapse justify-content-end',
-                        currentBreakpoint === 'md' ? 'bg-white shadow' : '',
-                        currentBreakpoint === 'sm' ? 'bg-white shadow' : '',
-                        currentBreakpoint === 'xs' ? 'bg-white shadow' : '',
+                    </a>
+                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                        <span ref={navBarToggle} className="navbar-toggler-icon"></span>
+                    </button>
+                    <div className={
+                        cx(
+                            'collapse navbar-collapse justify-content-end',
+                            ['md', 'sm', 'xs'].includes(currentBreakpoint) ? 'bg-white shadow' : '',
                         )} id="navbarNavDropdown">
-                    <ul className="navbar-nav">
-                        <li className="nav-item">
-                            <a className={cx('nav-link fs-3 px-4 py-3 text-uppercase active')}
-                               href="#home" onClick={() => closeNavBarDropdown()}>Home</a>
-                        </li>
-                        <li className="nav-item">
-                            <a className={cx('nav-link fs-3 px-4 py-3 text-uppercase')}
-                               href="#about" onClick={() => closeNavBarDropdown()}>About</a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link fs-3 px-4 py-3 text-uppercase"
-                               href="#projects" onClick={() => closeNavBarDropdown()}>Projects</a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link fs-3 px-4 py-3 text-uppercase"
-                               href="#contact" onClick={() => closeNavBarDropdown()}>Contact</a>
-                        </li>
-                    </ul>
+                        <ul className="navbar-nav">
+                            <li className="nav-item">
+                                <HashLink className="nav-link fs-3 px-4 py-3 text-uppercase active"
+                                          to="/#home">Home</HashLink>
+                            </li>
+                            <li className="nav-item">
+                                <HashLink className="nav-link fs-3 px-4 py-3 text-uppercase"
+                                          to="/#about">About</HashLink>
+                            </li>
+                            <li className="nav-item">
+                                <HashLink className="nav-link fs-3 px-4 py-3 text-uppercase"
+                                          to="/#projects">Projects</HashLink>
+                            </li>
+                            <li className="nav-item">
+                                <HashLink className="nav-link fs-3 px-4 py-3 text-uppercase"
+                                          to="/#contact">Contact</HashLink>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
+        </div>
     )
 }
