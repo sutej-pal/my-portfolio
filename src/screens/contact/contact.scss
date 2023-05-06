@@ -23,43 +23,33 @@
 
 
     .show-success-response {
-      opacity: 1;
-      animation: wheel .5s ease-in;
-      -webkit-animation: show .5s ease-in;
-    }
-
-    .hide-success-response {
       opacity: 0;
-      animation: wheel 2s ease-out;
-      -webkit-animation: hide 2s ease-out;
+      animation: loop 3.5s ease-in-out;
+      -webkit-animation: loop 3.5s ease-in-out;
     }
 
-    @keyframes show {
+    @keyframes loop {
       0% {
         opacity: 0;
       }
-      100% {
+      25% {
         opacity: 1;
       }
-    }
-    @-webkit-keyframes show {
-      0% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
-      }
-    }
-    @keyframes hide {
-      0% {
+      75% {
         opacity: 1;
       }
       100% {
         opacity: 0;
       }
     }
-    @-webkit-keyframes hide {
+    @-webkit-keyframes loop {
       0% {
+        opacity: 0;
+      }
+      25% {
+        opacity: 1;
+      }
+      75% {
         opacity: 1;
       }
       100% {
