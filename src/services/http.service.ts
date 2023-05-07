@@ -22,9 +22,9 @@ async function httpGet<T>(url: string, headers?: AxiosHeaders, params?: AxiosPar
     })).data;
 }
 
-async function httpPost<T>(url: string, payload: AxiosData, headers?: AxiosHeaders): Promise<T> {
+async function httpPost<T>(url: string, payload: unknown, headers?: AxiosHeaders): Promise<T> {
     const endpoint = url.startsWith("http") ? url : import.meta.env.VITE_API_ENDPOINT + url;
-    return (await http.post<T>(endpoint, payload, {
+    return (await http.post<T>(endpoint, payload, { 
         headers
     })).data;
 }
