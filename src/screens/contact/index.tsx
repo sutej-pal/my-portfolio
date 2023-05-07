@@ -133,6 +133,7 @@ export function Contact() {
                             </div>
                             <div>
                                 <div
+                                    style={{height: '24px'}}
                                     className={
                                         cx(
                                             'success-response text-success fs-6 text-center',
