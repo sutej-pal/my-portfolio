@@ -4,6 +4,7 @@ import dashboardRoutes from "./dashboard.routes";
 import {Footer} from "../components/footer";
 import ScrollToTop from "../components/scroll-top-top";
 import React from "react";
+import {NotFoundPage} from "../pages/not-found.page";
 
 
 function generateRoutes() {
@@ -19,7 +20,8 @@ function generateRoutes() {
                         <Footer/>
                     </>
                 ),
-                children: dashboardRoutes()
+                children: dashboardRoutes(),
+                errorElement: NotFoundPage()
             }
         ]
     )
