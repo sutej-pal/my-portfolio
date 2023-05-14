@@ -35,10 +35,10 @@ export function Footer() {
                             </div>
                             <div className="align-content-center d-flex gap-3 justify-content-end">
                                 <a role="button" href="https://github.com/sutej-pal/" target="_blank">
-                                    <img src="/images/github.svg" alt=""/>
+                                    <i className="bi bi-github text-white fs-3"></i>
                                 </a>
                                 <a role="button" href="https://www.linkedin.com/in/sutej-pal/" target="_blank">
-                                    <img src="/images/linkedin.svg" alt=""/>
+                                    <i className="bi bi-linkedin text-white fs-3"></i>
                                 </a>
                             </div>
                         </div>
@@ -47,7 +47,7 @@ export function Footer() {
                     <div className="row">
                         <div className="col-md-10 py-3 pb-4">
                             <div className="fs-6 text-center">
-                            Made with love by Sutej Pal
+                                Made with love by Sutej Pal
                             </div>
                         </div>
                     </div>

@@ -4,16 +4,18 @@ import {Link} from "react-router-dom";
 export function NotFoundPage() {
 
     // Don't forget to update in css.
-    const galaxySize = Array.from({length: 50}, (_, i) => i + 1);
+    const galaxySize = Array.from({length: 25}, (_, i) => i + 1);
 
     return (
         <>
             <main className='not-found-page-container'>
                 {
-                    galaxySize.map(() => <span className='particle'>4</span>)
-                }
-                {
-                    galaxySize.map(() => <span className='particle'>0</span>)
+                    galaxySize.map(() =>
+                        <>
+                            <span className='particle'>4</span>
+                            <span className='particle'>0</span>
+                        </>
+                    )
                 }
                 <article className='content rounded-1'>
                     <p className="text-start fs-1 text-primary fw-medium">Hmm.</p>

@@ -56,10 +56,14 @@ export function Header() {
                         Sutej Pal
                     </span>
                     </a>
-                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    <button className="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
                             data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-                            aria-label="Toggle navigation">
-                        <span ref={navBarToggle} className="navbar-toggler-icon"></span>
+                            aria-label="Toggle navigation" ref={navBarToggle}>
+                        <div className="hamburger">
+                            <span className="line"></span>
+                            <span className="line"></span>
+                            <span className="line"></span>
+                        </div>
                     </button>
                     <div className={
                         cx(

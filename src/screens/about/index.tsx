@@ -18,7 +18,7 @@ export function About() {
                     <div className="row gx-5 gy-2">
                         <div className="col-md-6">
                             <div className="section-subheading-1 mb-3">Get to know me !</div>
-                            <p>
+                            <p className="fs-5">
                                 I'm open to <strong>Job</strong> opportunities where I can
                                 contribute, learn and grow. If you have a good opportunity that
                                 matches my skills and experience then don't hesitate to
