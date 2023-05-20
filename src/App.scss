@@ -14,7 +14,7 @@
 //}
 
 .section-padding {
-  padding: 75px 0;
+  padding: 120px 0 0 0;
 
 }
 
@@ -42,13 +42,13 @@
 
 .section-subheading {
   line-height: 1.6;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   margin-bottom: 9rem;
 }
 
 .section-subheading-1 {
   line-height: 1.6;
-  font-size: 1.75rem;
+  font-size: 1.6rem;
   font-weight: bold;
 }
 
@@ -107,5 +107,10 @@
 
 .btn-light {
   background: #9993;
+}
+
+.text-justify {
+  text-align: justify;
+  text-justify: inter-word;
 }
 

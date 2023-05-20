@@ -10,12 +10,10 @@ export function NotFoundPage() {
         <>
             <main className='not-found-page-container'>
                 {
-                    galaxySize.map(() =>
-                        <>
-                            <span className='particle'>4</span>
-                            <span className='particle'>0</span>
-                        </>
-                    )
+                    galaxySize.map((i, index) => <span key={index + Math.random()} className='particle'>4</span>)
+                }
+                {
+                    galaxySize.map((i, index) => <span key={index + Math.random()} className='particle'>0</span>)
                 }
                 <article className='content rounded-1'>
                     <p className="text-start fs-1 text-primary fw-medium">Hmm.</p>

@@ -47,7 +47,7 @@ export function Header() {
     return (
         <div id="header">
             <nav className={cx('navbar fixed-top navbar-expand-lg p-0 header shadow-sm')}>
-                <div className="container-fluid bg-white h-100 header-container">
+                <div className="container-fluid bg-white header-container">
                     <a className="align-items-center d-flex gap-3 navbar-brand" href="#home">
                         <div className="align-text-top d-inline-block overflow-hidden rounded-circle">
                             <img src="/images/sutej.png" alt="Sutej Pal"/>

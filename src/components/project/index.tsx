@@ -40,7 +40,7 @@ export function Project({
                     ['sm', 'xs'].includes(currentBreakpoint) ? 'text-center' : ''
                 )}>
                 <div className="fs-2 fw-medium mb-2 project-name">{name}</div>
-                <p className="project-description">
+                <p className={cx('text-justify', ['sm', 'xs'].includes(currentBreakpoint) ? 'fs-6' : 'fs-4')}>
                     {briefSummary}
                 </p>
                 <Link to={'/project-details/' + name}>

@@ -8,7 +8,7 @@ const handleScroll = () => {
 
     sections.forEach((current: any) => {
         const sectionHeight = current.offsetHeight;
-        const sectionTop = current.offsetTop - 80;
+        const sectionTop = current.offsetTop - 120;
         const sectionId = current.getAttribute("id");
 
         /*
