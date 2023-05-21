@@ -21,10 +21,40 @@
       }
     }
 
+    form{
+      //max-height: 520px;
+    }
+    form.temp {
+      max-height: 600px;
+      animation: loop1 3.5s ease-in-out;
+    }
+    @keyframes loop1 {
+      0% {
+        max-height: 520px
+      }
+      10% {
+        max-height: 600px
+      }
+      50% {
+        max-height: 600px
+      }
+      90% {
+        max-height: 600px
+      }
+      100% {
+        max-height: 520px
+      }
+    }
+
+    .form-height {
+      //max-height: 600px;
+    }
+
+
+
 
     .show-success-response {
       opacity: 0;
-      width: 0;
       animation: loop 3.5s ease-in-out;
       -webkit-animation: loop 3.5s ease-in-out;
     }
@@ -32,7 +62,6 @@
     @keyframes loop {
       0% {
         opacity: 0;
-        width: 0;
       }
       25% {
         opacity: 1;
@@ -42,13 +71,11 @@
       }
       100% {
         opacity: 0;
-        width: auto;
       }
     }
     @-webkit-keyframes loop {
       0% {
         opacity: 0;
-        width: 0;
       }
       25% {
         opacity: 1;
@@ -58,7 +85,6 @@
       }
       100% {
         opacity: 0;
-        width: auto;
       }
     }
   }

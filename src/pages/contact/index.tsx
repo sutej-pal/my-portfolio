@@ -45,17 +45,16 @@ export function Contact() {
 
     const submit = async (e: FormEvent) => {
         e.preventDefault();
-        setContactSuccess(true);
-        setTimeout(() => {
-            setContactSuccess(false);
-        }, 50000);
-        return
+
         try {
             setIsFormSubmitted(true);
             if (!isFormDataValid()) {
                 return
             }
             setIsLoading(true);
+            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+            // @ts-ignore
+            formRef.current.style.maxHeight = formRef.current.clientHeight
             const request = {name, email, message};
             const response = await saveContactRequest(request);
             console.log('response => ', response);
@@ -120,7 +119,7 @@ export function Contact() {
             <div className="row">
                 <div className="col-sm-10 col-md-8 col-lg-6 col-xl-4 m-auto">
                     <div className="card shadow p-4 border-0 contact-form text-secondary mb-5">
-                        <form className={cx(isFormSubmitted ? 'was-validated' : '')} ref={formRef}>
+                        <form className={cx(isFormSubmitted ? 'was-validated' : '', isContactSuccess ? 'temp form-height' : '')} ref={formRef}>
                             <FormInput onChange={setName} value={name} label='Name' placeholder="Enter you name"
                                        errors={errors?.name}/>
                             <FormInput onChange={setEmail} type='email' value={email} label='Email'
