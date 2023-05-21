@@ -20,10 +20,16 @@ export const MyProjects: Project[] = [
     {
         "name": "HFCL",
         "image": "/images/hfcl.png",
-        "briefSummary": "HFCL is a leading global technology company connecting billions of people, devices, and systems." +
-            " For over 30 years, we have driven business transformations by harnessing the power of connectivity." +
-            " We design, integrate, and deliver next-gen technology products and solutions." +
-            " We believe in fostering innovation and collaborating with global partners to deliver accessible data network solutions to everyone.",
+        "briefSummary": "HFCL is a leading global technology company connecting billions of people, devices, and systems. For over 30 years, we have driven business transformations by harnessing the power of connectivity. We design, integrate, and deliver next-gen technology products and solutions. We believe in fostering innovation and collaborating with global partners to deliver accessible data network solutions to everyone.",
+        "description": [
+            "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc."
+        ],
+        "tools": ['Angular', 'SCSS', 'Bootstrap']
+    },
+    {
+        "name": "Portfolio",
+        "image": "/images/website-preview.png",
+        "briefSummary": "I have designed this portfolio as a template in such a way that, with a few changes anyone can get their own.",
         "description": [
             "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc."
         ],

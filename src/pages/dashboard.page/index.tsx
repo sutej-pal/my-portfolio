@@ -1,7 +1,7 @@
 import {Home} from "../../screens/home";
-import {About} from "../../screens/about";
-import {Projects} from "../../screens/projects";
-import {Contact} from "../../screens/contact";
+import {About} from "../about";
+import {Projects} from "../projects";
+import {Contact} from "../contact";
 
 function DashboardPage() {
     return (

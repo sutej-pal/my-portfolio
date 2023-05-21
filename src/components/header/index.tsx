@@ -46,8 +46,8 @@ export function Header() {
 
     return (
         <div id="header">
-            <nav className={cx('navbar fixed-top navbar-expand-lg p-0 header shadow-sm')}>
-                <div className="container-fluid bg-white header-container">
+            <nav className={cx('navbar fixed-top navbar-expand-lg p-0 header')}>
+                <div className="container-fluid bg-white shadow-sm header-container">
                     <a className="align-items-center d-flex gap-3 navbar-brand" href="#home">
                         <div className="align-text-top d-inline-block overflow-hidden rounded-circle">
                             <img src="/images/sutej.png" alt="Sutej Pal"/>
@@ -68,23 +68,28 @@ export function Header() {
                     <div className={
                         cx(
                             'collapse navbar-collapse justify-content-end',
-                            ['md', 'sm', 'xs'].includes(currentBreakpoint) ? 'bg-white shadow' : '',
+                            ['md', 'sm', 'xs'].includes(currentBreakpoint) ? 'bg-white' : '',
                         )} id="navbarNavDropdown">
                         <ul className="navbar-nav">
                             <li className="nav-item">
-                                <HashLink className="nav-link fs-3 px-4 py-3 text-uppercase active"
+                                <HashLink className={cx('nav-link fs-3 px-4 py-3 text-uppercase active',
+                                    ['sm', 'xs'].includes(currentBreakpoint) ? 'fs-5' : '',
+                                )}
                                           to="/#home">Home</HashLink>
                             </li>
                             <li className="nav-item">
-                                <HashLink className="nav-link fs-3 px-4 py-3 text-uppercase"
+                                <HashLink className={cx('nav-link fs-3 px-4 py-3 text-uppercase',
+                                    ['sm', 'xs'].includes(currentBreakpoint) ? 'fs-5' : '',)}
                                           to="/#about">About</HashLink>
                             </li>
                             <li className="nav-item">
-                                <HashLink className="nav-link fs-3 px-4 py-3 text-uppercase"
+                                <HashLink className={cx('nav-link fs-3 px-4 py-3 text-uppercase',
+                                    ['sm', 'xs'].includes(currentBreakpoint) ? 'fs-5' : '',)}
                                           to="/#projects">Projects</HashLink>
                             </li>
                             <li className="nav-item">
-                                <HashLink className="nav-link fs-3 px-4 py-3 text-uppercase"
+                                <HashLink className={cx('nav-link fs-3 px-4 py-3 text-uppercase',
+                                    ['sm', 'xs'].includes(currentBreakpoint) ? 'fs-5' : '',)}
                                           to="/#contact">Contact</HashLink>
                             </li>
                         </ul>

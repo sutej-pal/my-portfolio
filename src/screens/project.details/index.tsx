@@ -5,6 +5,8 @@ import {useEffect, useState} from "react";
 import {SectionHeading} from "../../components/section-heading";
 import {SectionSubHeading} from "../../components/section-subheading";
 import {Link} from "react-router-dom";
+import {detectBootstrapBreakpoint} from "../../helpers";
+import cx from "classnames";
 
 function ProjectDetailsPage() {
 
@@ -15,18 +17,27 @@ function ProjectDetailsPage() {
     useEffect(() => {
         const temp = MyProjects.filter((project: Project) => project.name === params.name);
         setProject(temp[0]);
-    }, [params.name])
+    }, [params.name]);
+
+    const [currentBreakpoint, setCurrentBreakpoint] = useState('');
+
+    useEffect(() => {
+        window.addEventListener('resize', handleResize);
+        setCurrentBreakpoint(detectBootstrapBreakpoint());
+    }, []);
+
+    const handleResize = () => {
+        setCurrentBreakpoint(detectBootstrapBreakpoint());
+    };
 
     return (
         <div className="project-details">
-            <div style={{height: '120px'}}></div>
+            <div style={{height: '100px'}}></div>
             <div className="align-items-center d-flex justify-content-center section-1">
                 <div className="container">
                     <SectionHeading heading={project?.name as string}></SectionHeading>
                     <SectionSubHeading
-                        heading={'This page contains detailed info about' +
-                            project?.name +
-                            'which includes Project Overview, Tools used and live links to official product.'}
+                        heading={`This page contains detailed info about <strong>${project?.name}</strong> which includes Project Overview, Tools used and live links to official product.`}
                     />
                     <div className="text-center">
                         <Link to={'#'}>
@@ -50,7 +61,7 @@ function ProjectDetailsPage() {
                             <div className="fs-3 fw-bolder mb-2">
                                 Project Overview
                             </div>
-                            <div className="fs-5">
+                            <div className={cx('text-justify', ['sm', 'xs'].includes(currentBreakpoint) ? 'fs-6' : 'fs-5')}>
                                 {project?.description.map((description: string, index: number) => {
                                     return <p key={index}>{description}</p>
                                 })}
@@ -68,8 +79,8 @@ function ProjectDetailsPage() {
                             </div>
                             <div className="my-5 py-5">
                                 <button onClick={() => navigate(-1)}
-                                        className="btn btn-secondary case-study p-3 px-4 shadow-lg text-uppercase">Go
-                                    Back
+                                        className="btn btn-secondary case-study p-3 px-4 shadow text-uppercase">
+                                    Go Back
                                 </button>
                             </div>
                         </div>

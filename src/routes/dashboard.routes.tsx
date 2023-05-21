@@ -1,5 +1,5 @@
 import DashboardPage from "../pages/dashboard.page";
-import ProjectDetailsPage from "../pages/project.details";
+import ProjectDetailsPage from "../screens/project.details";
 
 const dashboardRoutes = () => (
     [
