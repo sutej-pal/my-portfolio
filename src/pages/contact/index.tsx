@@ -114,7 +114,7 @@ export function Contact() {
             <SectionHeading heading='Contact'/>
             <div className="row">
                 <div className="col-sm-10 col-md-8 col-lg-6 col-xl-4 m-auto">
-                    <div className="card shadow p-4 border-0 contact-form text-secondary">
+                    <div className="card shadow p-4 border-0 contact-form text-secondary mb-5">
                         <form className={cx(isFormSubmitted ? 'was-validated' : '')} ref={formRef}>
                             <FormInput onChange={setName} value={name} label='Name' placeholder="Enter you name"
                                        errors={errors?.name}/>
