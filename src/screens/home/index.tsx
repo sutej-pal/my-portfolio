@@ -2,6 +2,7 @@ import './home.scss';
 import {useEffect, useState} from "react";
 import {detectBootstrapBreakpoint} from "../../helpers";
 import cx from "classnames";
+import {socialLinks} from "../../assets/data-source";
 
 export function Home() {
 
@@ -43,24 +44,18 @@ export function Home() {
                             </div>
                             <div className={
                                 cx(
-                                    'social-links w-auto shadow-lg bg-white',
+                                    'social-links w-auto shadow bg-white',
                                     ['md', 'sm', 'xs'].includes(currentBreakpoint) ? 'd-none' : '',
                                 )}>
-                                <div className="p-1 py-2">
-                                    <a href="https://www.linkedin.com/in/sutej-pal/" target="_blank">
-                                        <i className="bi bi-linkedin text-secondary fs-3"></i>
-                                    </a>
-                                </div>
-                                <div className="p-1 py-2">
-                                    <a href="https://github.com/sutej-pal/" target="_blank">
-                                        <i className="bi bi-github text-secondary fs-3"></i>
-                                    </a>
-                                </div>
-                                <div className="p-1 py-2">
-                                    <a href="https://twitter.com/Sutej_Master" target="_blank">
-                                        <i className="bi bi-twitter text-secondary fs-3"></i>
-                                    </a>
-                                </div>
+                                {
+                                    socialLinks.map((link, index: number) => {
+                                        return <div key={index} className="p-1 py-2">
+                                            <a href={link.link} target="_blank">
+                                                <i className={cx('bi text-secondary fs-3', link.iconClassName)}></i>
+                                            </a>
+                                        </div>
+                                    })
+                                }
                             </div>
                         </div>
                     </div>

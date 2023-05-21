@@ -24,6 +24,7 @@
 
     .show-success-response {
       opacity: 0;
+      width: 0;
       animation: loop 3.5s ease-in-out;
       -webkit-animation: loop 3.5s ease-in-out;
     }
@@ -31,6 +32,7 @@
     @keyframes loop {
       0% {
         opacity: 0;
+        width: 0;
       }
       25% {
         opacity: 1;
@@ -40,11 +42,13 @@
       }
       100% {
         opacity: 0;
+        width: auto;
       }
     }
     @-webkit-keyframes loop {
       0% {
         opacity: 0;
+        width: 0;
       }
       25% {
         opacity: 1;
@@ -54,6 +58,7 @@
       }
       100% {
         opacity: 0;
+        width: auto;
       }
     }
   }

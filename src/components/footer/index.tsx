@@ -1,6 +1,8 @@
 import './footer.scss';
 import {useEffect, useState} from "react";
 import {detectBootstrapBreakpoint} from "../../helpers";
+import {socialLinks} from "../../assets/data-source";
+import cx from "classnames";
 
 export function Footer() {
 
@@ -34,12 +36,13 @@ export function Footer() {
                                 Social
                             </div>
                             <div className="align-content-center d-flex gap-3 justify-content-end">
-                                <a role="button" href="https://github.com/sutej-pal/" target="_blank">
-                                    <i className="bi bi-github text-white fs-3"></i>
-                                </a>
-                                <a role="button" href="https://www.linkedin.com/in/sutej-pal/" target="_blank">
-                                    <i className="bi bi-linkedin text-white fs-3"></i>
-                                </a>
+                                {
+                                    socialLinks.map((link, index: number) => {
+                                        return <a key={index} role="button" href={link.link} target="_blank">
+                                            <i className={cx('bi bi-github text-white fs-3', link.iconClassName)}></i>
+                                        </a>
+                                    })
+                                }
                             </div>
                         </div>
                     </div>

@@ -45,6 +45,11 @@ export function Contact() {
 
     const submit = async (e: FormEvent) => {
         e.preventDefault();
+        setContactSuccess(true);
+        setTimeout(() => {
+            setContactSuccess(false);
+        }, 50000);
+        return
         try {
             setIsFormSubmitted(true);
             if (!isFormDataValid()) {
@@ -131,16 +136,14 @@ export function Contact() {
                                     {isLoading ? <Spinner white/> : 'Submit'}
                                 </button>
                             </div>
-                            <div>
-                                <div
-                                    style={{height: '24px'}}
-                                    className={
-                                        cx(
-                                            'success-response text-success fs-6 text-center',
-                                            isContactSuccess ? 'show-success-response' : 'visually-hidden'
-                                        )}>
-                                    Thanks for contacting, I will get back to you as soon as possible.
-                                </div>
+                            {isContactSuccess + 'dd'}
+                            <div
+                                className={
+                                    cx(
+                                        'success-response text-success fs-5 text-center py-2',
+                                        isContactSuccess ? 'show-success-response' : 'visually-hidden'
+                                    )}>
+                                Thanks for contacting. <br/> I will get back to you as soon as possible.
                             </div>
                         </form>
                     </div>
