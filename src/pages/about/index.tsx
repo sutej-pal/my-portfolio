@@ -19,7 +19,7 @@ export function About() {
     };
     return (
         <>
-            <section className="about section-padding" id="about">
+            <section className="about section-padding min-vh-100" id="about">
                 <div className="container">
                     <SectionHeading heading='About Me'/>
                     <SectionSubHeading heading="Here you will find more information about me, what I do, and my current skills mostly in

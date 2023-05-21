@@ -1,12 +1,31 @@
 export interface Project {
     name: string;
     image: string;
+    link?: string;
     briefSummary: string;
     description: string[];
     tools: string[];
 }
 
-export const MyProjects: Project[] = [
+export const socialLinks = [
+    {
+        name: 'Linked in',
+        iconClassName: 'bi-linkedin',
+        link: 'https://www.linkedin.com/in/sutej-pal/'
+    },
+    {
+        name: 'GitHub',
+        iconClassName: 'bi-github',
+        link: 'https://github.com/sutej-pal/'
+    },
+    {
+        name: 'Twitter',
+        iconClassName: 'bi-twitter',
+        link: 'https://twitter.com/Sutej_Master'
+    },
+]
+
+export const projects: Project[] = [
     {
         "name": "Pal's Parking",
         "image": "/images/hihfs.png",
@@ -29,7 +48,8 @@ export const MyProjects: Project[] = [
     {
         "name": "Portfolio",
         "image": "/images/website-preview.png",
-        "briefSummary": "I have designed this portfolio as a template in such a way that, with a few changes anyone can get their own.",
+        "link": "https://my-portfolio-imoc.onrender.com",
+        "briefSummary": "I have designed this portfolio as a template. In such a way that, with a few changes anyone can get their own.",
         "description": [
             "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc."
         ],

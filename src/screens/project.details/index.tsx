@@ -1,5 +1,5 @@
 import './project.details.scss';
-import {MyProjects, Project} from "../../assets/myProjects";
+import {projects, Project} from "../../assets/data-source";
 import {useNavigate, useParams} from "react-router";
 import {useEffect, useState} from "react";
 import {SectionHeading} from "../../components/section-heading";
@@ -15,7 +15,7 @@ function ProjectDetailsPage() {
     const params = useParams();
 
     useEffect(() => {
-        const temp = MyProjects.filter((project: Project) => project.name === params.name);
+        const temp = projects.filter((project: Project) => project.name === params.name);
         setProject(temp[0]);
     }, [params.name]);
 
@@ -39,8 +39,8 @@ function ProjectDetailsPage() {
                     <SectionSubHeading
                         heading={`This page contains detailed info about <strong>${project?.name}</strong> which includes Project Overview, Tools used and live links to official product.`}
                     />
-                    <div className="text-center">
-                        <Link to={'#'}>
+                    <div className={cx('text-center', project?.link ? '' : 'd-none' )}>
+                        <Link to={project?.link ? project?.link : '' } target="_blank">
                             <button
                                 className="btn btn-lg btn-secondary fs-4 px-5 py-3 shadow-lg text-uppercase case-study">Project
                                 Link
