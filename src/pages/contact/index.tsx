@@ -136,7 +136,6 @@ export function Contact() {
                                     {isLoading ? <Spinner white/> : 'Submit'}
                                 </button>
                             </div>
-                            {isContactSuccess + 'dd'}
                             <div
                                 className={
                                     cx(
