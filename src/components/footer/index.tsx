@@ -21,18 +21,18 @@ export function Footer() {
         <>
             <div className="bg-dark footer">
                 <div className="container text-white">
-                    <div className="row pt-4 pb-5">
+                    <div className="row py-2">
                         <div className="col-md-6">
-                            <div className="py-4 fs-2 text-uppercase fw-medium">
+                            <div className="py-4 fs-2 text-uppercase fw-medium font-family-montserrat">
                                 Sutej Pal
                             </div>
-                            <div className="fs-6">
+                            <div className="fs-6 font-family-montserrat">
                                 A Full-Stack Web Developer building the Websites and Web Applications
                                 that leads to the success of the overall product.
                             </div>
                         </div>
                         <div className="col-md-6">
-                            <div className="py-4 fs-2 text-uppercase fw-medium text-end">
+                            <div className="py-3 fs-5 text-uppercase fw-medium text-end font-family-montserrat">
                                 Social
                             </div>
                             <div className="align-content-center d-flex gap-3 justify-content-end">
@@ -48,9 +48,10 @@ export function Footer() {
                     </div>
                     <hr/>
                     <div className="row">
-                        <div className="col-md-10 py-3 pb-4">
-                            <div className="fs-6 text-center">
-                                Made with love by Sutej Pal
+                        <div className="col-md-12 pb-4">
+                            <div className={cx("text-center font-family-montserrat",
+                                ['xs', 'sm'].includes(currentBreakpoint) ? "fs-6" : "")}>
+                                Made with <span className="text-danger">&#10084;</span> by Sutej Pal
                             </div>
                         </div>
                     </div>

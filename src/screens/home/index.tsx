@@ -3,6 +3,7 @@ import {useEffect, useState} from "react";
 import {detectBootstrapBreakpoint} from "../../helpers";
 import cx from "classnames";
 import {socialLinks} from "../../assets/data-source";
+import {DefaultLinkButton} from "../../components/form-elements/default-button";
 
 export function Home() {
 
@@ -27,8 +28,8 @@ export function Home() {
                                 <div className="d-flex flex-column h-100 justify-content-center align-items-center">
                                     <div className="text-center">
                                         <div className="display-4 mb-3">
-                                <span className="name text-primary text-uppercase h-2 fw-bold">
-                                    Hi, I'm Sutej Pal Chaudhary
+                                <span className="name text-primary h-2 fw-bold font-family-montserrat">
+                                    Hi, <span className="text-uppercase">I'm Sutej Pal Chaudhary</span>
                                 </span>
                                         </div>
                                         <div className="m-auto fw-normal text-center section-subheading">
@@ -36,8 +37,7 @@ export function Home() {
                                             that leads to the success of the overall product.
                                         </div>
                                         <div className="mt-4">
-                                            <a href="#projects"
-                                               className="btn btn-lg btn-secondary shadow text-uppercase text-primary py-3 px-5 fw-medium fs-5 text-white">projects</a>
+                                            <DefaultLinkButton href={'#projects'} label={'projects'}/>
                                         </div>
                                     </div>
                                 </div>

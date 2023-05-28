@@ -4,6 +4,7 @@ import * as _ from "underscore";
 import {detectBootstrapBreakpoint, handleScroll} from "../../helpers";
 import cx from "classnames";
 import {Link} from "react-router-dom";
+import {DefaultLinkButton} from "../form-elements/default-button";
 
 interface ProjectProps {
     name: string;
@@ -43,10 +44,7 @@ export function Project({
                 <p className={cx('text-justify', ['sm', 'xs'].includes(currentBreakpoint) ? 'fs-6' : 'fs-4')}>
                     {briefSummary}
                 </p>
-                <Link to={'/project-details/' + name}>
-                <button className="btn btn-lg btn-secondary px-4 py-2 shadow text-uppercase case-study">Learn More
-                </button>
-                </Link>
+                <DefaultLinkButton href={'/project-details/' + name} label={'Learn More'}/>
             </div>
         </div>
     )

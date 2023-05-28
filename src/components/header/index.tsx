@@ -52,9 +52,9 @@ export function Header() {
                         <div className="align-text-top d-inline-block overflow-hidden rounded-circle">
                             <img src="/images/sutej.png" alt="Sutej Pal"/>
                         </div>
-                        <span className="fs-2 text-secondary text-uppercase">
-                        Sutej Pal
-                    </span>
+                        <span className="fs-2 fw-medium text-secondary text-uppercase font-family-montserrat">
+                            Sutej Pal
+                        </span>
                     </a>
                     <button className="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
                             data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
@@ -67,7 +67,7 @@ export function Header() {
                     </button>
                     <div className={
                         cx(
-                            'collapse navbar-collapse justify-content-end',
+                            'collapse navbar-collapse justify-content-end font-family-montserrat',
                             ['md', 'sm', 'xs'].includes(currentBreakpoint) ? 'bg-white' : '',
                         )} id="navbarNavDropdown">
                         <ul className="navbar-nav">
