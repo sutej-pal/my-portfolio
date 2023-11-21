@@ -16,14 +16,15 @@ const http = axios.create({
 
 
 async function httpGet<T>(url: string, headers?: AxiosHeaders, params?: AxiosParams): Promise<T> {
-    const endpoint = url.startsWith("http") ? url : import.meta.env.VITE_API_ENDPOINT + url;
+    const endpoint = url.startsWith("http") ? url : process.env.REACT_APP_API_ENDPOINT + url;
     return (await http.get<T>(endpoint, {
         params: params
     })).data;
 }
 
 async function httpPost<T>(url: string, payload: unknown, headers?: AxiosHeaders): Promise<T> {
-    const endpoint = url.startsWith("http") ? url : import.meta.env.VITE_API_ENDPOINT + url;
+    debugger
+    const endpoint = url.startsWith("http") ? url : process.env.REACT_APP_API_ENDPOINT + url;
     return (await http.post<T>(endpoint, payload, { 
         headers
     })).data;
