@@ -54,5 +54,15 @@ export const projects: Project[] = [
             "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc."
         ],
         "tools": ['Angular', 'SCSS', 'Bootstrap']
+    },
+    {
+        "name": "Resume Builder",
+        "image": "/images/resume-builder.png",
+        "link": "https://resume-builder-n8yx.onrender.com",
+        "briefSummary": "I have created a POC for a application dealing with creating and displaying dynamic PDF's.",
+        "description": [
+            "This is a POC for an application dealing with the creating and displaying dynamic PDF's. I have used <b>pdf-make</b> package in the back-end for creating PDF with dynamic data provided through the api and <b>react-pdf</b> on the front-end for displaying the PDF in the frontend. The idea behind using two different packages was to reduce the load from the front-end and execute all the exensive functions on the server."
+        ],
+        "tools": ['MERN', 'SCSS', 'Bootstrap', 'pdf-make', 'react-pdf', 'axios', 'validator']
     }
 ]
