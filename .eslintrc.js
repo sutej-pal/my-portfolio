@@ -9,7 +9,7 @@ module.exports = {
   rules: {
     "react/react-in-jsx-scope": "off",
     "react/self-closing-comp": "off",
-    'react/no-unescaped-entities': "warn",
+    "react/no-unescaped-entities": "warn",
     "no-constant-condition": "off",
     "react/prop-types": "off",
     "no-unused-vars": "warn",
